@@ -7,7 +7,11 @@ import io, base64, os
 import gdown
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=[
+    "http://localhost:5173",
+    "https://oncho-scan.vercel.app", 
+    "*" 
+])
 
 IMG_SIZE   = (224, 224)
 CLASS_NAMES = ['benign', 'malignant', 'normal']
