@@ -2,6 +2,5 @@ services:
   - type: web
     name: oncoscan-api
     env: python
-    pythonVersion: "3.11.0"
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app --timeout 120 --workers 1
